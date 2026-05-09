@@ -1,0 +1,528 @@
+{
+  "info": {
+    "_postman_id": "725fee2e-69e4-4e15-b93a-44783df73f24",
+    "name": "employee-manager-backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "28630375"
+  },
+  "item": [
+    {
+      "name": "admin-register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "admin",
+              "type": "text",
+              "uuid": "8e84af37-8217-4734-b66b-e2637cd4397c"
+            },
+            {
+              "key": "email",
+              "value": "admin@gmail.com",
+              "type": "text",
+              "uuid": "638f71b0-0b4b-4b07-b52f-716cea4597ee"
+            },
+            {
+              "key": "password",
+              "value": "123456",
+              "type": "text",
+              "uuid": "5df0820b-52e4-4ba5-92e6-8d43d0e100a8"
+            },
+            {
+              "key": "role",
+              "value": "admin",
+              "type": "text",
+              "uuid": "4abae66d-6271-4f1f-8fcb-62aa4a9e698d"
+            },
+            {
+              "key": "avatar",
+              "type": "file",
+              "uuid": "29d8c4f7-5d92-42bd-a3f4-10c5e40b119d",
+              "src": "/C:/Users/subha/Downloads/admin_1.jpg"
+            },
+            {
+              "key": "phone",
+              "value": "999999999",
+              "type": "text",
+              "uuid": "c4dba6b3-2fbc-4414-af9f-cfa078e26d5a"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:7059/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7059",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "admin-login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7059/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7059",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "manager-register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYyMGVlM2Q0ZGE0MjBiMjU0NTk4NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3ODMyNzc5OCwiZXhwIjoxNzc4NDE0MTk4fQ.gWicrAFjizlFNoYHHoXW67Rn0FDoaRc9nt592pwJXXQ",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "type": "text",
+              "uuid": "9b4d2ad5-a79e-4500-9d9c-9a51b399d6d7",
+              "value": "manager1"
+            },
+            {
+              "key": "email",
+              "value": "manager1@gmail.com",
+              "type": "text",
+              "uuid": "8b9f48e6-5936-4a16-a68a-14c577d10644"
+            },
+            {
+              "key": "password",
+              "value": "123456",
+              "type": "text",
+              "uuid": "c49d80eb-d041-4d73-8fb6-03e895874fdb"
+            },
+            {
+              "key": "role",
+              "value": "manager",
+              "type": "text",
+              "uuid": "cd9cf2cd-af2b-4267-9b79-480b4b43c246"
+            },
+            {
+              "key": "avatar",
+              "type": "file",
+              "uuid": "1e754a4c-c572-49be-8f69-c33dfbfe67a1",
+              "src": "/C:/Users/subha/Downloads/user_002.jpg"
+            },
+            {
+              "key": "phone",
+              "value": "123456789",
+              "type": "text",
+              "uuid": "9f1db0f9-6391-4b90-9f06-0c6c4f91a384"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:7059/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7059",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "register-employee",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYyMGVlM2Q0ZGE0MjBiMjU0NTk4NyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3ODMyNzc5OCwiZXhwIjoxNzc4NDE0MTk4fQ.gWicrAFjizlFNoYHHoXW67Rn0FDoaRc9nt592pwJXXQ",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "type": "text",
+              "uuid": "9b4d2ad5-a79e-4500-9d9c-9a51b399d6d7",
+              "value": "employee2"
+            },
+            {
+              "key": "email",
+              "value": "employee2@gmail.com",
+              "type": "text",
+              "uuid": "8b9f48e6-5936-4a16-a68a-14c577d10644"
+            },
+            {
+              "key": "password",
+              "value": "123456",
+              "type": "text",
+              "uuid": "c49d80eb-d041-4d73-8fb6-03e895874fdb"
+            },
+            {
+              "key": "role",
+              "value": "employee",
+              "type": "text",
+              "uuid": "cd9cf2cd-af2b-4267-9b79-480b4b43c246"
+            },
+            {
+              "key": "avatar",
+              "type": "file",
+              "uuid": "1e754a4c-c572-49be-8f69-c33dfbfe67a1",
+              "src": "/C:/Users/subha/Downloads/user_004.jpg"
+            },
+            {
+              "key": "phone",
+              "value": "666666666",
+              "type": "text",
+              "uuid": "9f1db0f9-6391-4b90-9f06-0c6c4f91a384"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:7059/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7059",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "manager1-login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"manager1@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7059/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7059",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "manager2-login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"manager2@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7059/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7059",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "task-creation-manager",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYyNGEyZDQxYmE0ZWY4YzJjMDQwMCIsInJvbGUiOiJtYW5hZ2VyIiwiaWF0IjoxNzc4MzI5ODk4LCJleHAiOjE3Nzg0MTYyOTh9.6HWdb42nTjgLJf19IFIodBUlxYZMnmcjjnvwuO7pxqM",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Build Dashboard 3\",\r\n  \"description\": \"Create admin dashboard UI 3\",\r\n  \"assignedTo\": \"69ff285bd41ba4ef8c2c0402\",\r\n  \"priority\": \"Medium\",\r\n  \"dueDate\": \"2027-03-18\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7059/api/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7059",
+          "path": [
+            "api",
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "reassign-task",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYyNGEyZDQxYmE0ZWY4YzJjMDQwMCIsInJvbGUiOiJtYW5hZ2VyIiwiaWF0IjoxNzc4MzI5ODk4LCJleHAiOjE3Nzg0MTYyOTh9.6HWdb42nTjgLJf19IFIodBUlxYZMnmcjjnvwuO7pxqM",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"assignedTo\": \"69ff2832d41ba4ef8c2c0401\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7059/api/tasks/assign/69ff2ba0d41ba4ef8c2c0404",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7059",
+          "path": [
+            "api",
+            "tasks",
+            "assign",
+            "69ff2ba0d41ba4ef8c2c0404"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login-employee",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"employee1@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7059/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7059",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "employee-view-tasks",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYyODMyZDQxYmE0ZWY4YzJjMDQwMSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTc3ODMzMDc0NCwiZXhwIjoxNzc4NDE3MTQ0fQ.Ex82v0IHOnO0cQuOOEcZ-35B1myOT_JF66vp2K53LFQ",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:7059/api/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7059",
+          "path": [
+            "api",
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-task-status",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYyODMyZDQxYmE0ZWY4YzJjMDQwMSIsInJvbGUiOiJlbXBsb3llZSIsImlhdCI6MTc3ODMzMDc0NCwiZXhwIjoxNzc4NDE3MTQ0fQ.Ex82v0IHOnO0cQuOOEcZ-35B1myOT_JF66vp2K53LFQ",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"status\": \"Completed\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7059/api/tasks/status/69ff2ba0d41ba4ef8c2c0404",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7059",
+          "path": [
+            "api",
+            "tasks",
+            "status",
+            "69ff2ba0d41ba4ef8c2c0404"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-task",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYyNGEyZDQxYmE0ZWY4YzJjMDQwMCIsInJvbGUiOiJtYW5hZ2VyIiwiaWF0IjoxNzc4MzI5ODk4LCJleHAiOjE3Nzg0MTYyOTh9.6HWdb42nTjgLJf19IFIodBUlxYZMnmcjjnvwuO7pxqM",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dueDate\": \"2026-12-24\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:7059/api/tasks/69ff2a85d41ba4ef8c2c0403",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7059",
+          "path": [
+            "api",
+            "tasks",
+            "69ff2a85d41ba4ef8c2c0403"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete-task",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZmYyNGEyZDQxYmE0ZWY4YzJjMDQwMCIsInJvbGUiOiJtYW5hZ2VyIiwiaWF0IjoxNzc4MzI5ODk4LCJleHAiOjE3Nzg0MTYyOTh9.6HWdb42nTjgLJf19IFIodBUlxYZMnmcjjnvwuO7pxqM",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:7059/api/tasks/69ff2a85d41aa4ef8c2c0409",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7059",
+          "path": [
+            "api",
+            "tasks",
+            "69ff2a85d41aa4ef8c2c0409"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
